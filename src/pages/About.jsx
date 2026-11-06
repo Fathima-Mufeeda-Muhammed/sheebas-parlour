@@ -49,14 +49,13 @@ const HERO_IMAGE =
 const ABOUT_IMAGE =
   "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=80";
 
-// Opened on 3 October 2003. The number of years updates itself.
 const ESTABLISHED = new Date(2003, 9, 3);
 const YEARS_OPEN = Math.floor(
   (Date.now() - ESTABLISHED.getTime()) / (1000 * 60 * 60 * 24 * 365.25)
 );
 
 function PhotoWithFallback({ src, alt, className = "" }) {
-  const [failed, setFailed] = useState(false);
+  const [failed, setFailed] = useState(false);  
 
   if (failed) {
     return (
@@ -127,7 +126,7 @@ function About() {
     <div className="sb-body bg-[#fbf7ef] text-[#1c1712]">
       <style>{STYLES}</style>
 
-      {/* ================= PAGE HEADER (with image) ================= */}
+      {/* ================= PAGE HEADER ================= */}
       <section className="relative overflow-hidden bg-[#1c1712]">
         <div
           aria-hidden="true"
@@ -201,7 +200,7 @@ function About() {
         </div>
       </section>
 
-      {/* ================= SPECIALIST IN (marquee) ================= */}
+      {/* ================= SPECIALIST IN ================= */}
       <section
         aria-label="Specialist in"
         className="sb-marquee bg-gradient-to-r from-[#9c731c] via-[#d2a640] to-[#9c731c] text-[#1c1712] overflow-hidden"
@@ -361,3 +360,16 @@ function About() {
 }
 
 export default About;
+
+
+
+
+
+
+
+
+
+
+
+
+
